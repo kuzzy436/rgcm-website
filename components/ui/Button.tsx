@@ -1,34 +1,32 @@
 import Link from "next/link";
+import { ReactNode } from "react";
+import clsx from "clsx";
 
 interface ButtonProps {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: "primary" | "secondary";
+  className?: string;
 }
 
 export default function Button({
   href,
   children,
   variant = "primary",
+  className,
 }: ButtonProps) {
-  const styles =
-    variant === "primary"
-      ? "bg-[#D4AF37] text-[#0B3C5D] hover:scale-105"
-      : "border border-white text-white hover:bg-white hover:text-[#0B3C5D]";
-
   return (
     <Link
       href={href}
-      className={`rounded-full px-8 py-4 font-semibold transition ${styles}`}
+      className={clsx(
+        "inline-flex items-center justify-center rounded-xl px-7 py-3 font-semibold transition-all duration-300",
+        variant === "primary"
+          ? "bg-yellow-500 text-black hover:bg-yellow-400"
+          : "border border-slate-300 bg-white text-slate-900 hover:bg-slate-900 hover:text-white",
+        className
+      )}
     >
       {children}
     </Link>
   );
 }
-
-<Button
-  href="/sermons"
-  variant="secondary"
->
-  Watch Sermons
-</Button>

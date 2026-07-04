@@ -9,18 +9,18 @@ export default function Hero() {
     <section
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: "url('/images/hero.jpg')",
+        backgroundImage: "url('/images/hero/hero.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#0B3C5D]/75"></div>
+      <div className="absolute inset-0 bg-[#0B3C5D]/75" />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-[#0B3C5D]/40 to-[#0B3C5D]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[#0B3C5D]/40 to-[#0B3C5D]" />
 
-      {/* Content */}
+      {/* Hero Content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function Hero() {
           Welcome to RGCM
         </p>
 
-        <h1 className="font-heading text-5xl font-bold leading-tight md:text-7xl">
+        <h1 className="font-heading text-5xl font-extrabold leading-tight text-white drop-shadow-2xl md:text-7xl">
           Reconciling Lives
           <br />
           Through the Grace of Christ
@@ -40,20 +40,36 @@ export default function Hero() {
         <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-200 md:text-xl">
           Experience God's transforming grace through passionate worship,
           biblical teaching, prayer, discipleship, and a loving community
-          committed to Christ.
+          committed to Jesus Christ.
         </p>
 
+        {/* Scripture */}
+        <p className="mx-auto mt-6 max-w-2xl italic text-[#D4AF37]">
+          “We are therefore Christ's ambassadors, as though God were making His
+          appeal through us.”
+          <br />
+          <span className="font-semibold">— 2 Corinthians 5:20</span>
+        </p>
+
+        {/* Service Information */}
+        <div className="mt-10 flex flex-wrap justify-center gap-6 rounded-full bg-white/10 px-8 py-4 backdrop-blur-md">
+          <span>📍 Jos, Plateau State</span>
+          <span>⛪ Sundays • 8:00 AM</span>
+          <span>🙏 Thursdays • 4:00 PM</span>
+        </div>
+
+        {/* Action Buttons */}
         <div className="mt-12 flex flex-wrap justify-center gap-6">
           <Link
-            href="/visit"
-            className="rounded-full bg-[#D4AF37] px-8 py-4 font-semibold text-[#0B3C5D] transition hover:scale-105"
+            href="/contact"
+            className="rounded-full bg-[#D4AF37] px-8 py-4 font-semibold text-[#0B3C5D] shadow-lg transition duration-300 hover:scale-105 hover:shadow-2xl"
           >
             Plan Your Visit
           </Link>
 
           <Link
             href="/sermons"
-            className="rounded-full border border-white px-8 py-4 font-semibold transition hover:bg-white hover:text-[#0B3C5D]"
+            className="rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition duration-300 hover:bg-white hover:text-[#0B3C5D]"
           >
             Watch Sermons
           </Link>

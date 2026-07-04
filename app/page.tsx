@@ -1,33 +1,27 @@
-import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
-import LiveBanner from "@/components/home/LiveBanner";
 import Welcome from "@/components/home/Welcome";
-import Footer from "@/components/layout/Footer";git
-import MissionVision from "@/components/home/MissionVision";
-import Stats from "@/components/home/Stats";
-import CoreValues from "@/components/home/CoreValues";
+import ServiceTimes from "@/components/home/ServiceTimes";
 import Pastor from "@/components/home/Pastor";
 import Ministries from "@/components/home/Ministries";
+import Sermons from "@/components/home/Sermons";
 import Events from "@/components/home/Events";
+import Testimonies from "@/components/home/Testimonies";
+import Gallery from "@/components/home/Gallery";
+import CTA from "@/components/home/CTA";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Navbar />
-
-      <main>
-        <Hero />
-        <LiveBanner />
-        <Welcome />
-        <MissionVision />
-        <Stats/>
-        <CoreValues />
-        <Pastor />
-        <Ministries />
-        <Events />
-      </main>
-
-      <Footer />
+    <>z
+      <Hero />
+      <Welcome />
+      <ServiceTimes />
+      <Pastor />
+      <Ministries />
+      <Sermons />
+      <Events />
+      <Testimonies />
+      <Gallery />
+      <CTA />
     </>
   );
 }

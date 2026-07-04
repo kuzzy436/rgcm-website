@@ -3,6 +3,10 @@
 import { motion } from "framer-motion";
 import { CalendarDays, Clock, MapPin } from "lucide-react";
 
+export default function Events() {
+  return <section className="py-24"></section>;
+}
+
 const events = [
   {
     title: "Sunday Worship Experience",
@@ -11,9 +15,9 @@ const events = [
     location: "RGCM Main Auditorium",
   },
   {
-    title: "Midweek Bible Study",
-    date: "Every Wednesday",
-    time: "6:00 PM",
+    title: "Midweek Prayers",
+    date: "Every Thursday",
+    time: "4:00 PM",
     location: "Church Auditorium",
   },
   {
